@@ -1,2 +1,2 @@
-# Leetcode
-practice the leetcode
+# Leetcode in VSCode
+practice the leetcode at VS Code
