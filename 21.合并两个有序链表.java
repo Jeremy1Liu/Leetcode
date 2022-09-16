@@ -1,5 +1,3 @@
-import javax.management.ListenerNotFoundException;
-
 /*
  * @lc app=leetcode.cn id=21 lang=java
  *

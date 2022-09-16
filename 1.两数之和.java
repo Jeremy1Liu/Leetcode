@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /*
  * @lc app=leetcode.cn id=1 lang=java
  *
@@ -7,18 +9,21 @@
 // @lc code=start
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> map1 = new HashMap<>();
-
         int[] res = new int[2];
 
-        for(int i=0; i < nums.length; i++){
-            if(map1.containsKey(target - nums[i])) {
+        //利用HashMap有键值对的特性，存储数据信息和位置i的信息
+        //然后通过target - nums[i] 再来找到对应的j的位置；
+        HashMap<Integer, Integer> hMap = new HashMap<>();
+
+        for(int i=0; i<nums.length; i++){
+            if(hMap.containsKey(target - nums[i])){
                 res[1] = i;
-                res[0] = map1.get(target - nums[i]);
+                res[0] = hMap.get(target - nums[i]);
                 break;
             }
-            map1.put(nums[i], i);
+            hMap.put(nums[i], i);
         }
+
 
         return res;
     }
