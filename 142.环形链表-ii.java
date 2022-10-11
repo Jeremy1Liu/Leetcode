@@ -29,6 +29,9 @@ public class Solution {
         // return null;
 
 
+        //数学推导为：(a+x)*2 = a+b+x; 则a=b-x;
+        //此时相遇点就在a+x的位置。让指针1从头开始，指针2从相遇点开始
+        //指针1走了a到达环点，指针2走了b-x也到达环点，此时相遇在环点。
         //根据代码随想录所写的；精彩。
         ListNode slow = head, fast = head;
         while(fast != null && fast.next != null){
