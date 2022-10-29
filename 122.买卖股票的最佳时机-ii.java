@@ -7,6 +7,7 @@
 // @lc code=start
 class Solution {
     public int maxProfit(int[] prices) {
+        //这道题用二维折线图来思考，收集每一段上升的线段，即为所有可得的利润。
         int len= prices.length;
         int max = 0;
 
